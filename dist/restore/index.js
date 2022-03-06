@@ -43302,7 +43302,7 @@ function saveCache(paths, key, options) {
             if (core.isDebug()) {
                 yield tar_1.listTar(archivePath, compressionMethod);
             }
-            const fileSizeLimit = 5 * 1024 * 1024 * 1024; // 5GB per repo limit
+            const fileSizeLimit = 10 * 1024 * 1024 * 1024; // 5GB per repo limit
             const archiveFileSize = utils.getArchiveFileSizeInBytes(archivePath);
             core.debug(`File Size: ${archiveFileSize}`);
             if (archiveFileSize > fileSizeLimit) {
